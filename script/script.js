@@ -64,7 +64,7 @@ $(function () {
     menuBack.click(function () {
         $(this).addClass('act2').parent().siblings().find('a').removeClass('act2');
         i = $(this).parent().index();
-        $('.menu_back').css('background', 'url("../images/menu_back' + i + '.png") center /cover')
+        $('.menu_back').css('background', 'url("./images/menu_back' + i + '.png") center /cover')
         menuList.eq(i).show().siblings().hide();
         menu.find('.menu_center').attr('src', './images/menu' + i + '.png')
     })
