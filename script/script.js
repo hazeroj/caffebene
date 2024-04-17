@@ -35,7 +35,7 @@ $(function () {
             nextSlide = (n + 1) % 3
             // console.log(nextSlide)
             slide.find('.s_btn>li a').removeClass('act1').parent().eq(nextSlide).find('a').addClass('act1')
-            slide.find('.s_img').animate({ 'left': -wWith * nextSlide + 'px' }, 1000)
+            slide.find('.s_img').stop().animate({ 'left': -wWith * nextSlide + 'px' }, 1000)
 
         }, 4000);
     }
@@ -53,7 +53,7 @@ $(function () {
         i = $(this).parent().index();
         $(this).addClass('act1').parent().siblings().find('a').removeClass('act1')
         // console.log(i);
-        $('.s_img').animate({ 'left': -wWith * i + 'px' }, 1000)
+        $('.s_img').stop().animate({ 'left': -wWith * i + 'px' }, 1000)
     })
 
     // 메뉴(커피)
