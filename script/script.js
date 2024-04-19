@@ -2,7 +2,8 @@ $(function () {
     const wWith = $(window).width();
     const slide = $('#slide');
     let n, i, timer, nextSlide;
-    const nav =$('nav')
+    const header = $('header')
+    const nav = header.find('nav')
     const gnb = nav.find('.gnb>li')
     const lnb = gnb.find('.sub')
     const lnbBack = $('.back')
@@ -38,6 +39,11 @@ $(function () {
         $('.s_img').stop().animate({ 'left': -wWith * i + 'px' }, 1000)
     })
 
+    // 내비게이션 언어영역
+    nav.find('.lang>a:last-child').click(function(){
+        alert('수리중입니다. 잠시만 기다려주세요.');
+    })
+
     // 메뉴
     const menu = $('#menu')
     const menuBack = menu.find('.menu_back a')
@@ -50,6 +56,23 @@ $(function () {
         menuList.eq(i).show().siblings().hide();
         menu.find('.menu_center').attr('src', './images/menu' + i + '.png')
     })
+
+    // 신메뉴
+    const newMain = $('#new');
+    const newList = newMain.find('.new_list');
+    const newBtn =newMain.find('.new_btn>li>a');
+
+    newBtn.click(function(){
+    if($(window).width() >=744){
+            i = $(this).parent().index();
+            $(this).addClass('act3').parent().siblings().find('a').removeClass('act3');
+            newList.stop().animate({'left': -524 * i + 'px'},1000)
+        
+    } else{
+        i = $(this).parent().index();
+        $(this).addClass('act3').parent().siblings().find('a').removeClass('act3');
+        newList.stop().animate({'left': -347 * i + 'px'},1000)
+    }})
 
 
     // 푸드(좌우슬라이드)  
