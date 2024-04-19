@@ -284,52 +284,55 @@ nav>div:nth-child(3)>a {
     height: 600px;
     position: relative;
 }
+.new_list_wrap{
 
-#new>ul {
+    margin: 20px 115px;
+}
+.new_list {
     display: grid;
     grid-template-columns: 180px 320px 180px 320px;
     grid-template-rows: repeat(2, 150px);
     gap: 15px;
-    margin: 20px 115px;
     position: relative;
+    top: 0px;left: 0px;
     z-index: 600;
 }
 
-#new li {
+.new_list li {
     background-color: #fff;
     border-radius: 50px;
 }
 
-#new>ul>li:first-child {
+.new_list>li:first-child {
     grid-area: 1/1/3/2;
 }
 
-#new>ul>li:nth-child(3) {
+.new_list>li:nth-child(3) {
     grid-area: 1/3/3/3;
 }
 
-#new a {
+.new_list a {
     display: block;
     height: 100%;
 }
 
 
-#new h3 {
+.new_list h3 {
     text-align: center;
     font-size: 1rem;
     font-weight: 500;
     padding-top: 10px;
 }
 
-#new li:first-child h3,
-#new li:nth-child(3) h3 {
+.new_list li:first-child h3,
+.new_list li:nth-child(3) h3 {
     clear: left;
     padding-top: 0px;
 }
 
 
 
-#new a>div {
+.new_list a>div {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -339,60 +342,63 @@ nav>div:nth-child(3)>a {
 }
 
 
-#new li:first-child>a>div,
-#new li:nth-child(3)>a>div {
+.new_list li:first-child>a>div,
+.new_list li:nth-child(3)>a>div {
     float: left;
     padding-left: 10px;
     width: 180px;
     height: 65px;
 }
 
-#new li:first-child>a:hover>div,
-#new li:nth-child(3)>a:hover>div {
+.new_list li:first-child>a:hover>div,
+.new_list li:nth-child(3)>a:hover>div {
     height: 50%;
 }
 
-#new a>img {
+.new_list a>img {
     height: 150px;
-    width: 140px;
+    width: 130px;
     float: left;
     transition: 0.2s;
 }
 
-#new li:first-child>a>img,
-#new li:nth-child(3)>a>img {
+.new_list li:first-child>a>img,
+.new_list li:nth-child(3)>a>img {
 
     height: 230px;
     width: 180px;
 }
 
-#new li:first-child>a:hover>img,
-#new li:nth-child(3)>a:hover>img {
+.new_list li:first-child>a:hover>img,
+.new_list li:nth-child(3)>a:hover>img {
     height: 157px;
-    width: 140px;
-    margin: 0px 20px;
+    width: 120px;
+    margin: 0px 30px;
 }
 
-#new p {
+.new_list p {
     position: relative;
     font-size: 0.9rem;
     display: none;
     line-height: 1.1rem;
 }
 
-#new a:hover p {
+.new_list a:hover p {
     display: block;
 }
 
 
-#new div>img {
+.new_list div>img {
     height: 25px;
     display: none;
 }
 
-#new a:hover div>img {
+.new_list a:hover div>img {
     display: block;
 }
+
+.new_btn{display: none;}
+
 
 #new::after,
 #new::before {
