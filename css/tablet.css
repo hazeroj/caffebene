@@ -7,7 +7,6 @@
         width: 100%;
         height: 85px;
     }
-
     .nav_btn {
         position: absolute;
         top: -67.5px;
@@ -55,7 +54,7 @@
     }
 
     .gnb {
-        width: 744px;
+        width: 100%;
         flex-direction: column;
         margin-top: 0px;
         display: none;
@@ -160,6 +159,7 @@
         text-align: center;
     }
 
+    .s_btn{right:3%;}
     /* 메뉴 */
     #menu {
         width: 100%;
@@ -190,6 +190,7 @@
         top: 270px;
         left: 0px;
     }
+
 
     .menu_list ul {
         justify-content: space-between;
@@ -251,6 +252,17 @@
 
     .act3 {
         background-color: #E6383D !important;
+    }
+
+    #new::after {
+        border-top-right-radius: 250px;
+    }
+
+    #new::before {
+        border-top-right-radius: 250px;
+    }    #food::after,
+    #food::before {
+        display: none;
     }
 
     /* 푸드 */

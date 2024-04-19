@@ -114,6 +114,8 @@ nav>div:nth-child(3)>a {
     padding-right: 5px;
 }
 
+
+
 /* 메인영역시작 */
 /* 슬라이드 */
 #slide {
@@ -251,6 +253,7 @@ nav>div:nth-child(3)>a {
 
 .menu_list a {
     display: block;
+    text-align: center;
 }
 
 .menu_list>div>ul>li>a>img {
