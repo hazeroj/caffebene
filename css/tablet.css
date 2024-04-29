@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @media screen and (max-width:1279px) and (min-width:744px) {
-
+    .top{display: none;}
 
     header {
         width: 100%;
@@ -9,14 +9,14 @@
     }
     .nav_btn {
         position: absolute;
-        top: -67.5px;
+        top: -57.5px;
         right: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
 
     .nav_btn span {
@@ -217,7 +217,10 @@
         margin: 0px 30px;
     }
 
-
+    .new_list li:first-child>a>div,
+    .new_list li:nth-child(3)> a>div{
+        height: 50% !important;
+    }
     .new_list p,
     .new_list div>img {
         display: block;
@@ -355,4 +358,6 @@
         align-items: center;
         height: 50px;
     }
+
+
 }

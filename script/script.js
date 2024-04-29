@@ -5,8 +5,11 @@ $(function () {
     const header = $('header')
     const nav = header.find('nav')
     const gnb = nav.find('.gnb>li')
-    const lnb = gnb.find('.sub')
-    const lnbBack = $('.back')
+    const sub = gnb.find('.sub')
+    const footer = $('footer')
+    const lnb = footer.find(' .lnb>li>a')
+    const sub2 = footer.find('.sub2')
+    const subBack = $('.back')
 
 
 
@@ -106,10 +109,10 @@ $(function () {
 
 
     // 내비게이션 효과
-    lnb.click(function () {
+    sub.click(function () {
         $(this).prev().css('font-weight', '800')
     })
-    lnb.mouseout(function () {
+    sub.mouseout(function () {
         $(this).prev().css('font-weight', '400')
     })
 
@@ -121,18 +124,19 @@ $(function () {
         // 내비게이션
 
         gnb.mouseenter(function () {
-            lnb.stop().slideDown();
-            lnbBack.stop().slideDown();
+            sub.stop().slideDown();
+            subBack.stop().slideDown();
         })
 
-        lnbBack.mouseout(function () {
-            lnb.stop().slideUp();
-            lnbBack.stop().slideUp();
+        subBack.mouseout(function () {
+            sub.stop().slideUp();
+            subBack.stop().slideUp();
         })
 
 
         // 탑버튼
 
+        if($(window).width()>=1280){
         const topBtn = $('.top');
 
         $(window).scroll(function () {
@@ -146,7 +150,7 @@ $(function () {
 
         topBtn.click(function () {
             $(window).scrollTop(0);
-        });
+        });}
     }
 
 
@@ -158,14 +162,21 @@ $(function () {
             $(this).siblings().stop().slideToggle();
             nav.find('a:nth-child(3)').css('display','block')
             $(this).find('span').toggleClass('c_btn');
-            lnb.slideUp();
+            sub.slideUp();
         })
 
         gnb.find('a').click(function(){
-            $(this).next(lnb).slideToggle().parent().siblings().find(lnb).slideUp();
+            $(this).next(sub).slideToggle().parent().siblings().find(sub).slideUp();
         })
 
 
+    }
+
+    // 모바일
+    if($(window).width()<743){
+        lnb.click(function(){
+            $(this).toggleClass('act4').next().slideToggle().parent().siblings().find('a').removeClass('act4').next().slideUp();
+        })
     }
 
 })
