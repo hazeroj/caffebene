@@ -179,4 +179,18 @@ $(function () {
         })
     }
 
+    // 서브 좌우 슬라이드
+        // 푸드(좌우슬라이드)  
+        const main1 = $('#main1 ')
+        let m_l_btn = main1.find('.m_l_btn')
+        let m_r_btn = main1.find('.m_r_btn ')
+        let m_slide = main1.find('.r_list')
+    
+        m_r_btn.click(function () {
+            m_slide.find('li:first-child').appendTo(m_slide)
+        })
+        m_l_btn.click(function () {
+            m_slide.find('li:last-child').prependTo(m_slide)
+        })
+
 })
