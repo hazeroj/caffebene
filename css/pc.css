@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -14,7 +14,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0px 30px;
-    position: relative;z-index: 900;
+    position: relative;
+    z-index: 900;
 }
 
 
@@ -22,11 +23,16 @@ header h1 img {
     height: 70px;
 }
 
-.nav_btn{display: none;}
+.nav_btn {
+    display: none;
+}
 
-nav{display: flex;
-    width: calc( 100% - 250px);
-    justify-content: space-between;align-items: center;}
+nav {
+    display: flex;
+    width: calc(100% - 250px);
+    justify-content: space-between;
+    align-items: center;
+}
 
 .gnb {
     display: flex;
@@ -42,7 +48,7 @@ nav{display: flex;
     z-index: 900;
 }
 
- .gnb>li a:focus,
+.gnb>li a:focus,
 .gnb>li a:hover {
     font-weight: 800;
 }
@@ -107,6 +113,7 @@ nav>div:nth-child(3)>a {
 .lang>a {
     font-size: 0.9rem;
     display: inline-block;
+    color: #a3a3a3;
 }
 
 .lang>a:first-child {
@@ -175,6 +182,10 @@ nav>div:nth-child(3)>a {
     height: 35px !important;
     border-radius: 20px !important;
     background-color: #E6383D !important;
+}
+
+.act4 {
+    color: #333 !important;
 }
 
 #menu {
@@ -287,17 +298,20 @@ nav>div:nth-child(3)>a {
     height: 600px;
     position: relative;
 }
-.new_list_wrap{
+
+.new_list_wrap {
 
     margin: 20px 115px;
 }
+
 .new_list {
     display: grid;
     grid-template-columns: 180px 320px 180px 320px;
     grid-template-rows: repeat(2, 150px);
     gap: 15px;
     position: relative;
-    top: 0px;left: 0px;
+    top: 0px;
+    left: 0px;
     z-index: 600;
 }
 
@@ -400,7 +414,9 @@ nav>div:nth-child(3)>a {
     display: block;
 }
 
-.new_btn{display: none;}
+.new_btn {
+    display: none;
+}
 
 
 #new::after,
@@ -473,7 +489,8 @@ nav>div:nth-child(3)>a {
     top: 50%;
     width: 35px;
     height: 35px;
-    cursor: pointer;z-index: 50;
+    cursor: pointer;
+    z-index: 50;
 }
 
 #food .l_btn {
@@ -668,6 +685,11 @@ nav>div:nth-child(3)>a {
 
 /* 푸터영역시작 */
 footer {
+    width: 100%;
+    background-color: #273658;
+}
+
+.f_inner {
     width: 1280px;
     margin: 0px auto;
     padding: 40px 80px;
@@ -676,7 +698,7 @@ footer {
     align-items: center;
 }
 
-footer h2 img {
+.f_inner h2 img {
     height: 65px;
 }
 
@@ -691,6 +713,7 @@ footer h2 img {
     display: block;
     padding: 5px 0px;
     font-weight: 600;
+    color: #fff;
 }
 
 .sub2 li {
@@ -701,13 +724,15 @@ footer h2 img {
     font-size: 0.9rem;
     text-align: center;
     display: block;
-    padding: 5px
+    padding: 5px;
+    color: #fff;
 }
 
 address {
     text-align: center;
     font-size: 0.8rem;
     margin-top: 20px;
+    color: #fff;
 }
 
 .side {
@@ -728,6 +753,7 @@ address {
     display: block;
     text-align: center;
     font-size: 1.2rem;
+    color: #fff;
 }
 
 /* 탑버튼 */
@@ -745,7 +771,7 @@ address {
     padding: 3.5px;
 }
 
-.top p{
+.top p {
     text-align: center;
     width: 48px;
     height: 48px;
@@ -754,4 +780,196 @@ address {
     border: 2px solid #fff;
     line-height: 48px;
     border-radius: 50%;
+}
+
+/* 서브메뉴 ////////////////////////////////////////////////////////////// */
+
+
+#main1 section:first-child {
+    width: 100%;
+    height: 750px;
+    background-color: #F2F2F2;
+}
+
+#main1 article {
+    width: 1280px;
+    margin: 0px auto;
+}
+
+/* 서브화면 상단내비 */
+.navi {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 50px 30px 100px;
+    margin-bottom: 20px;
+}
+
+.navi h2 {
+    padding: 0px;
+    margin-bottom: 0px;
+}
+
+.navi ul {
+    display: flex;
+}
+
+.navi ul li {
+    padding: 0px 5px;
+}
+
+.navi ul a,
+.navi ul span {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 30px;
+}
+
+.navi ul li:last-child a {
+    color: #7A7A7A !important;
+    font-weight: 600;
+}
+
+/* 서브화면 상세페이지 */
+.detail {
+    display: flex;
+}
+
+.detail img {
+    flex: 1;
+}
+
+/* 서브화면 영양성분 */
+.calorie {
+    flex: 1.3;
+    padding-top: 60px;
+}
+
+.calorie h3 {
+    font-size: 1.2rem;
+    text-indent: 1rem;
+    width: 532px;
+    line-height: 3rem;
+    border-bottom: 1px solid #333;
+}
+
+.calorie p {
+    font-size: 1rem;
+    text-indent: 1rem;
+    padding: 30px 0px;
+}
+
+.calorie table {
+    font-size: 0.9rem;
+    width: 532px;
+}
+
+.calorie th {
+    line-height: 33px;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.calorie td {
+    line-height: 43px;
+}
+
+.calorie td:first-child {
+    padding-left: 20px;
+}
+
+.calorie td:last-child {
+    text-align: center;
+}
+
+.calorie tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.calorie tbody tr:first-child td {
+    background-color: #273658;
+    color: #fff;
+    font-weight: 600;
+}
+
+.calorie tr:first-child td {
+    line-height: 33px;
+}
+
+/* 추천메뉴 */
+
+.recommend {
+    width: 1280px;
+    margin: 0px auto;
+    position: relative;
+}
+
+.recommend h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 3rem;
+    margin: 30px 0px 50px;
+}
+
+.m_r_btn img,
+.m_l_btn img {
+    width: 35px;
+    position: absolute;
+    top: 50%;
+}
+
+.m_r_btn img {
+    right: 2%;
+}
+
+.m_l_btn img {
+    left: 2%;
+}
+
+.r_list {
+    display: flex;
+    width: 1000px;
+    margin: 0px auto;
+
+}
+
+.r_list li {
+    width: 250px;
+    text-align: center;
+}
+
+.r_list li img {
+    width: 160px;
+    margin: 0px 45px;
+}
+
+.r_list a {
+    display: flex;
+    flex-direction: column;
+}
+
+.r_list span {
+    font-size: 0.9rem;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.recommend button {
+    display: block;
+    width: 100px;
+    border-radius: 30px;
+    border: none;
+    background-color: #273658;
+    margin: 50px auto 60px;
+}
+
+.recommend button a {
+    line-height: 30px;
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+}
+
+#text{
+    display: none;
 }

@@ -423,7 +423,7 @@
     }
 
     /* 푸터 */
-    footer {
+    .f_inner {
         width: 100%;
         padding: 80px 10px 30px;
         position: relative;
@@ -431,7 +431,7 @@
         justify-content: space-evenly;
     }
 
-    footer h2 {
+    .f_inner h2 {
         position: absolute;
         top: 10px;
         left: 0px;
@@ -439,7 +439,7 @@
         text-align: center;
     }
 
-    footer h2 img {
+    .f_inner h2 img {
         height: 50px;
         margin: 8px 0px;
     }
@@ -475,11 +475,10 @@
         display: block;
         padding: 12px 0px;
         font-weight: 400;
-        border-bottom: 1px solid rgb(39, 54, 88);
+        /* border-bottom: 1px solid rgba(255, 255, 255,0.1); */
     }
 
     .act4 {
-        color: #F2F2F2 !important;
         border-bottom: none;
         background-color: rgba(39, 54, 88, 0.8);
     }
@@ -502,8 +501,11 @@
         display: block;
         padding: 10px 0px;
         background-color: #f2f2f2;
+        color: #273658;
     }
-
+    .sub2 a:focus{
+        background-color: #fff;
+    }
     .sub2 li:last-child {
 
         border-bottom: 1px solid rgb(39, 54, 88);
